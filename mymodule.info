@@ -1,0 +1,4 @@
+name = My module
+description = Boilerplate for custom module development
+package = Development
+core = "7.x"

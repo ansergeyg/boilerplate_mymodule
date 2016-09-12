@@ -1,0 +1,54 @@
+<?php
+
+/**
+ * Description.
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function mymodule_menu() {
+
+  $items['mymodule'] = array(
+    'title' => 'My custom module page',//Replace me
+    'page callback' => 'mymodule_page',//Replace me
+    'access arguments' => array('access content'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_help().
+ */
+function mymodule_help($path, $arg) {
+
+  switch ($path) {
+    case 'admin/help#mymodule':
+
+      // Return a line-break version of the README.
+      $readme = file_get_contents(drupal_get_path('module', 'mymodule') . '/README.txt');
+      return nl2br($readme);
+  }
+}
+
+/**
+ * The same method as i 'page callback' => 'mymodule_page'
+ * @return string
+ *   Page content here.
+ */
+function mymodule_page() {
+
+  return 'Custom module description';
+}
+
+/**
+ * Implements hook_page_build().
+ */
+function mymodule_page_build() {
+
+  drupal_add_js(drupal_get_path('module', 'mymodule') . '/js/mymodule.js');
+  drupal_add_css(drupal_get_path('module', 'mymodule') . '/css/mymodule.css');
+
+}
