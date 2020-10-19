@@ -1,0 +1,22 @@
+{
+  "name": "ansergeyg/boilerplate_mymodule",
+  "type": "drupal-module",
+  "description": "Boilerplate mymodule.",
+  "homepage": "https://github.com/ansergeyg/boilerplate_mymodule",
+  "authors": [
+    {
+      "name": "Sergey An",
+      "homepage": "https://www.drupal.org/u/ansergeyg",
+      "role": "Maintainer"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/ansergeyg/boilerplate_mymodule/issues",
+    "source": "https://github.com/ansergeyg/boilerplate_mymodule"
+  },
+  "license": "GPL-2.0-or-later",
+  "minimum-stability": "dev",
+  "require": {
+    "drupal/core": "^8.8 || ^9"
+  }
+}
